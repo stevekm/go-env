@@ -30,4 +30,14 @@ conda deactivate
 
 # Notes
 
-- at the time of writing, Go version 1.18 is not available in `conda`
+- at the time of writing, [Go version 1.18](https://go.dev/blog/go1.18) is not available in `conda`
+
+- `Makefile` recipes included for macOS and Linux
+
+# Resources & References
+
+- `conda` package for Go: https://anaconda.org/conda-forge/go
+
+- Go homepage: https://go.dev/
+
+- Go official download page: https://go.dev/dl/
