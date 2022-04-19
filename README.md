@@ -1,6 +1,6 @@
 # `go-env`
 
-Quick setup for an isolated Go development instance. Based on `conda` to faciliate usage on servers without `sudo` or root access or where global system installation of `go` is otherwise undesirable.
+Quick setup for an isolated Go development instance ("virtual environment"). Based on `conda` to faciliate usage on servers without `sudo` or root access or where global system installation of `go` is otherwise undesirable.
 
 # Setup
 
@@ -33,6 +33,10 @@ conda deactivate
 - at the time of writing, [Go version 1.18](https://go.dev/blog/go1.18) is not available in `conda`
 
 - `Makefile` recipes included for macOS and Linux
+
+- this is not the officially supported method of installing and using Go, so if you do not know why you need to setup Go this way then you probably should not use these setup methods
+
+- make sure you do not accidentally run a command like `go test ./...` in this directory where the `conda` Go installation is located! Put your Go projects in a subdir or another directory tree
 
 # Resources & References
 
