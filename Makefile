@@ -10,7 +10,7 @@ UNAME:=$(shell uname)
 
 # CONDA INSTALL METHOD TO USE ON DEV/PROD SERVERS
 # ~~~~~ Install Dependencies ~~~~~ #
-export PATH:=$(CURDIR)/conda/bin:$(CURDIR)/bin:$(PATH)
+export PATH:=$(CURDIR)/conda/bin:$(PATH)
 unexport PYTHONPATH
 unexport PYTHONHOME
 
@@ -30,5 +30,7 @@ conda:
 	bash "$(CONDASH)" -b -p conda
 	rm -f "$(CONDASH)"
 
+# make: source: No such file or directory
 install: conda
+	. ./conda/bin/activate
 	conda install -y conda-forge::go=1.17.8
